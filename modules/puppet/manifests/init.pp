@@ -2,7 +2,7 @@
 
 class puppet {
   file {'/usr/local/bin/papply':
-    source => 'puppet:///modules/puppet/files/papply.sh',
+    source => 'puppet:///modules/puppet/papply.sh',
     mode   => '0755',
   }
 }
