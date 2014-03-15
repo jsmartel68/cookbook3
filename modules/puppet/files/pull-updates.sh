@@ -7,6 +7,10 @@ fatal(){
 
 GITDIR=/config/github/puppetmain
 LOGFILE=/var/log/puppet/pull-updates.log
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+export PATH
+
 DATE=`date +%Y%m%d-%H:%M:%S`
 
 # redirect STDOUT and STDERR to the log file
