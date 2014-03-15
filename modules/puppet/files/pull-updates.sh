@@ -12,7 +12,7 @@ DATE=`date +%Y%m%d-%H:%M:%S`
 # redirect STDOUT and STDERR to the log file
 exec >>${LOGFILE} 2>&1
 
-echo $DATE || fatal "Cannot write to log file"
+echo "${DATE} starting pull-updates" || fatal "Cannot write to log file"
 
 cd $GITDIR || fatal "Could not cd to repo directory"
 
