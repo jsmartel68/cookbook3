@@ -1,11 +1,15 @@
 #!/bin/sh
 
-GITDIR=/config/github/puppetmain
-
 fatal(){ 
         echo "*** $*" 
         exit 1
 } 
+
+GITDIR=/config/github/puppetmain
+LOGFILE=/var/log/puppet/pull-updates.log
+
+# redirect STDOUT and STDERR to the log file
+exec >>${LOGFILE} 2>&1
 
 cd $GITDIR || fatal "Could not cd to repo directory"
 
